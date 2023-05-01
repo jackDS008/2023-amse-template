@@ -30,6 +30,6 @@ The car park occupancy data provides you with an overview of the current car par
 
 ## Work Packages
 
-1. Data exploration #1
+1. Data exploration [#1]
 2. ...
 
