@@ -30,12 +30,20 @@ The car park occupancy data provides you with an overview of the current car par
 
 ## Work Packages
 
-1. Data exploration #1
-2. Clean data #2
-3. Combine two datasets #3
-4. Data analysis #4
-5. Data pipeline #5
-6. Testing #6
-7. Continuous integration #7
-8. Publish project #8
+1. Data exploration [#1][i1]
+2. Clean data [#2][i2]
+3. Combine two datasets [#3][i3]
+4. Data analysis [#4][i4]
+5. Data pipeline [#5][i5]
+6. Testing [#6][i6]
+7. Continuous integration [#7][i7]
+8. Publish project [#8][i8]
 
+[i1]: https://github.com/jackDS008/2023-amse-template/issues/1
+[i2]: https://github.com/jackDS008/2023-amse-template/issues/2
+[i3]: https://github.com/jackDS008/2023-amse-template/issues/3
+[i4]: https://github.com/jackDS008/2023-amse-template/issues/4
+[i5]: https://github.com/jackDS008/2023-amse-template/issues/5
+[i6]: https://github.com/jackDS008/2023-amse-template/issues/6
+[i7]: https://github.com/jackDS008/2023-amse-template/issues/7
+[i8]: https://github.com/jackDS008/2023-amse-template/issues/8
