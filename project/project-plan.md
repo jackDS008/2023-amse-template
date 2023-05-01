@@ -25,7 +25,12 @@ These historical data are quality-checked measured values and observations. They
 
 
 ### Datasource2: Parkhausbelegung (Köln)
-* Link: https://mobilithek.info/offers/-7694090497647342627
+* Offered by: Köln via https://offenedaten-koeln.de/dataset/647ed189-ce31-40db-9b9d-353a7768dadf/resource/34681d19-c5c6-4a01-8d10-c8cc4b699dcd
+* Metadata URL: https://mobilithek.info/offers/-7694090497647342627
+* Data URL: https://www.stadt-koeln.de/externe-dienste/open-data/parking.php
+* Data Type: JSON
+
+The car park occupancy data provides you with an overview of the current car park occupancy in Cologne. The update times are approximately 5 to 10 minutes.
 
 ## Work Packages
 
