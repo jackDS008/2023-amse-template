@@ -30,6 +30,12 @@ The car park occupancy data provides you with an overview of the current car par
 
 ## Work Packages
 
-1. Data exploration [#1]
-2. ...
+1. Data exploration #1
+2. Clean data #2
+3. Combine two datasets #3
+4. Data analysis #4
+5. Data pipeline #5
+6. Testing #6
+7. Continuous integration #7
+8. Publish project #8
 
