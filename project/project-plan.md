@@ -30,9 +30,6 @@ The car park occupancy data provides you with an overview of the current car par
 
 ## Work Packages
 
-<!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
-
-1. Example Issue [#1][i1]
+1. Data exploration #1
 2. ...
 
-[i1]: https://github.com/jvalue/2023-amse-template/issues/1
