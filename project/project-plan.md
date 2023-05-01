@@ -2,17 +2,13 @@
 
 ## Summary
 
-<!-- Describe your data science project in max. 5 sentences. -->
-This projects analyzes XY.
+This projects analyzes to what extent the time of day and the air temperature have an influence on car park use in Cologne.
 
 ## Rationale
 
-<!-- Outline the impact of the analysis, e.g. which pains it solves. -->
-The analysis helps XY to do YZ.
+The City of Cologne can use the results to predict what the car park utilisation will be at different times of day, days of the week and temperatures. This allows them to come up with a new, more effective concept for parking in Cologne.
 
 ## Datasources
-
-<!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
 
 ### Datasource1: Historische stündliche Stationsmessungen der Lufttemperatur und Luftfeuchte für Deutschland
 * Offered by: Bundesministerium für Digitales und Verkehr (BMDV) via https://cdc.dwd.de/portal/
