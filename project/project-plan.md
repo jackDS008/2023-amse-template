@@ -15,18 +15,17 @@ The analysis helps XY to do YZ.
 <!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
 
 ### Datasource1: Historische stündliche Stationsmessungen der Lufttemperatur und Luftfeuchte für Deutschland
-* Link: https://mobilithek.info/offers/-4920664365588601619
+* Offered by: Bundesministerium für Digitales und Verkehr (BMDV) via https://cdc.dwd.de/portal/
+* Metadata URL: https://mobilithek.info/offers/-4920664365588601619
+* Data URL: https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/air_temperature/historical/
+* Data Type: CSV
+* Further information: https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/air_temperature/historical/BESCHREIBUNG_obsgermany_climate_hourly_tu_historical_de.pdf
+
+These historical data are quality-checked measured values and observations. They originate from stations of the DWD and legally and qualitatively equivalent partner network stations. Extensive station metadata (station relocations, instrument changes, change of reference time, changes in algorithms) are included.
+
 
 ### Datasource2: Parkhausbelegung (Köln)
 * Link: https://mobilithek.info/offers/-7694090497647342627
-
-
-TODO
-* Metadata URL: https://mobilithek.info/offers/-6901989592576801458
-* Data URL: https://raw.githubusercontent.com/od-ms/radverkehr-zaehlstellen/main/100035541/2019-01.csv
-* Data Type: CSV
-
-Short description.
 
 ## Work Packages
 
