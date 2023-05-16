@@ -10,23 +10,47 @@ The City of Cologne can use the results to predict what the car park utilisation
 
 ## Datasources
 
-### Datasource1: Historische stündliche Stationsmessungen der Lufttemperatur und Luftfeuchte für Deutschland
-* Offered by: Bundesministerium für Digitales und Verkehr (BMDV) via https://cdc.dwd.de/portal/
-* Metadata URL: https://mobilithek.info/offers/-4920664365588601619
-* Data URL: https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/air_temperature/historical/
+### Datasource1: Weather Data of Cologne
+* Offered by: Meteostat Developers https://dev.meteostat.net
+* Metadata URL:  https://dev.meteostat.net/bulk/hourly.html
+* Data URL: https://bulk.meteostat.net/v2/hourly/D2968.csv.gz
 * Data Type: CSV
-* Further information: https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/air_temperature/historical/BESCHREIBUNG_obsgermany_climate_hourly_tu_historical_de.pdf
+* Further information: tbd
 
-These historical data are quality-checked measured values and observations. They originate from stations of the DWD and legally and qualitatively equivalent partner network stations. Extensive station metadata (station relocations, instrument changes, change of reference time, changes in algorithms) are included.
+Hourly data of weather parameters in Cologne. This endpoint provides one GZ compressed CSV file per weather station. The provided data is being aggregated from historical databases, METAR reports and SYNOP data.
+
+Location Cologne:
+
+```json
+{
+"id": "D2968",
+        "name": {
+            "en": "Köln-Stammheim"
+        },
+        "country": "DE",
+        "region": "NW",
+        "identifiers": {
+            "national": "02968",
+            "wmo": null,
+            "icao": null
+        },
+        "location": {
+            "latitude": 50.9894,
+            "longitude": 6.9777,
+            "elevation": 43
+        }
+}
+```
 
 
-### Datasource2: Parkhausbelegung (Köln)
+### Datasource2: Car park occupancy (Cologne)
 * Offered by: Köln via https://offenedaten-koeln.de/dataset/647ed189-ce31-40db-9b9d-353a7768dadf/resource/34681d19-c5c6-4a01-8d10-c8cc4b699dcd
 * Metadata URL: https://mobilithek.info/offers/-7694090497647342627
 * Data URL: https://www.stadt-koeln.de/externe-dienste/open-data/parking.php
 * Data Type: JSON
 
 The car park occupancy data provides you with an overview of the current car park occupancy in Cologne. The update times are approximately 5 to 10 minutes.
+
 
 ## Work Packages
 
