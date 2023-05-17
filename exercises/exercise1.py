@@ -6,7 +6,7 @@ import sqlite3
 url = "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/rhein-kreis-neuss-flughafen-weltweit/exports/csv"
 
 # Define the SQLite database and table names
-database_name = "exercises/airports.sqlite"
+database_name = "irports.sqlite"
 table_name = "airports"
 
 # Fetch the data from the URL
