@@ -5,10 +5,10 @@ import gzip
 import io
 
 # Define the URL of the data file
-url = "https://bulk.meteostat.net/v2/hourly/D2968.csv.gz"
+url = "https://bulk.meteostat.net/v2/hourly/10517.csv.gz"
 
 # Define the SQLite database filename
-db_filename = "weather_data.db"
+db_filename = "data/weather_data.db"
 
 # Function to download and extract the gzip file
 def download_data(url):

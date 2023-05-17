@@ -2,54 +2,53 @@
 
 ## Summary
 
-This projects analyzes to what extent the time of day and the air temperature have an influence on car park use in Cologne.
+This projects analyzes to what extent the time of day and the air temperature have an influence on parking violations in Bonn.
 
 ## Rationale
 
-The City of Cologne can use the results to predict what the car park utilisation will be at different times of day, days of the week and temperatures. This allows them to come up with a new, more effective concept for parking in Cologne.
+The City of Bonn can use the results to predict what the parking violations will be at different times of day, days of the week and temperatures. This allows them to come up with a new, more effective concept to prevent parking violations in Bonn.
 
 ## Datasources
 
-### Datasource1: Weather Data of Cologne
+### Datasource1: Weather Data of Bonn
 * Offered by: Meteostat Developers https://dev.meteostat.net
 * Metadata URL:  https://dev.meteostat.net/bulk/hourly.html
-* Data URL: https://bulk.meteostat.net/v2/hourly/D2968.csv.gz
+* Data URL: https://bulk.meteostat.net/v2/hourly/10517.csv.gz
 * Data Type: CSV
-* Further information: tbd
 
-Hourly data of weather parameters in Cologne. This endpoint provides one GZ compressed CSV file per weather station. The provided data is being aggregated from historical databases, METAR reports and SYNOP data.
+Hourly data of weather parameters in Bonn. This endpoint provides one GZ compressed CSV file per weather station. The provided data is being aggregated from historical databases, METAR reports and SYNOP data.
 
-Location Cologne:
+Location Bonn:
 
 ```json
 {
-"id": "D2968",
+"id": "10517",
         "name": {
-            "en": "Köln-Stammheim"
+            "en": "Bonn-Friesdorf"
         },
         "country": "DE",
         "region": "NW",
         "identifiers": {
-            "national": "02968",
-            "wmo": null,
+            "national": "00599",
+            "wmo": "10517",
             "icao": null
         },
         "location": {
-            "latitude": 50.9894,
-            "longitude": 6.9777,
-            "elevation": 43
+            "latitude": 50.7,
+            "longitude": 7.15,
+            "elevation": 64
         }
 }
 ```
 
 
-### Datasource2: Car park occupancy (Cologne)
-* Offered by: Köln via https://offenedaten-koeln.de/dataset/647ed189-ce31-40db-9b9d-353a7768dadf/resource/34681d19-c5c6-4a01-8d10-c8cc4b699dcd
-* Metadata URL: https://mobilithek.info/offers/-7694090497647342627
-* Data URL: https://www.stadt-koeln.de/externe-dienste/open-data/parking.php
-* Data Type: JSON
+### Datasource2: Warnings and fines for stationary traffic (parking violations) 2022 in Bonn
+* Offered by: Bonn via https://opendata.bonn.de
+* Metadata URL: https://mobilithek.info/offers/-6571901671376151135
+* Data URL: https://opendata.bonn.de/sites/default/files/ParkverstoesseBonn2020_0.csv
+* Data Type: CSV
 
-The car park occupancy data provides you with an overview of the current car park occupancy in Cologne. The update times are approximately 5 to 10 minutes.
+The data set contains the warnings and fines issued for parking violations in the city of Bonn. The list of offences is sorted by day, time, place, offence number, amount of the fine and type of vehicle (car/truck). The explanation of the individual offence numbers is listed in the uniform federal offence catalogue: https://www.kba.de/
 
 
 ## Work Packages
