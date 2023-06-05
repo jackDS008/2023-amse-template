@@ -59,6 +59,7 @@ plt.plot(average_violations.index, linear_trendline(average_violations.index), c
 poly5_coefficients = np.polyfit(average_violations.index, average_violations, 5)
 poly5_trendline = np.poly1d(poly5_coefficients)
 plt.plot(average_violations.index, poly5_trendline(average_violations.index), color='blue', label='Polynomial (Degree 5) Trendline')
+plt.savefig('temperature_vs_parking_violations.png', dpi=300)
 plt.show()
 
 # Calculate correlation coefficients
