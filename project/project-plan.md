@@ -53,12 +53,12 @@ The data set contains the warnings and fines issued for parking violations in th
 
 ## Work Packages
 
-- [ ] 1. Data exploration [#1][i1]
-- [ ] 2. Clean data [#2][i2]
-- [ ] 3. Combine two datasets [#3][i3]
-- [ ] 4. Data analysis [#4][i4]
+- [X] 1. Data exploration [#1][i1]
+- [X] 2. Clean data [#2][i2]
+- [X] 3. Combine two datasets [#3][i3]
+- [X] 4. Data analysis [#4][i4]
 - [x] 5. Data pipeline [#5][i5]
-- [ ] 6. Testing [#6][i6]
+- [X] 6. Testing [#6][i6]
 - [ ] 7. Continuous integration [#7][i7]
 - [ ] 8. Publish project [#8][i8]
 
