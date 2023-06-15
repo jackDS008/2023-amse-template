@@ -1,6 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy import Integer, Text
+import numpy as np
 
 # Read the CSV file
 data = pd.read_csv("https://www-genesis.destatis.de/genesis/downloads/00/tables/46251-0021_00.csv", sep=";", engine="python", skiprows=7, skipfooter=4, header=None, encoding="iso-8859-1", usecols = [0,1,2,12,22,32,42,52,62,72])
@@ -23,7 +24,7 @@ selected_columns = {
 data.rename(columns=selected_columns, inplace=True)
 
 # Convert CIN to 5 digits with leading zeros
-data["CIN"] = data["CIN"].astype(int).astype(str).apply(lambda x: x.zfill(5))
+data["CIN"] = data["CIN"].replace('-', np.nan).astype(int).astype(str).apply(lambda x: x.zfill(5))
 
 # Drop NA
 data = data.dropna()
