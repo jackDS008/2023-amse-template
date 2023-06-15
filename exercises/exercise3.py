@@ -23,8 +23,19 @@ selected_columns = {
 # Rename columns
 data.rename(columns=selected_columns, inplace=True)
 
+
+# Convert numeric columns to appropriate data type
+numeric_columns = ['petrol', 'diesel', 'gas', 'electro', 'hybrid', 'plugInHybrid', 'others']
+data[numeric_columns] = data[numeric_columns].apply(pd.to_numeric, errors='coerce')
+
+# Drop rows that contain invalid values
+invalid_rows = ~(
+    (data[numeric_columns] > 0).all(axis=1)
+)
+data = data[~invalid_rows]
+
 # Convert CIN to 5 digits with leading zeros
-data["CIN"] = data["CIN"].replace('-', np.nan).astype(int).astype(str).apply(lambda x: x.zfill(5))
+data["CIN"] = data["CIN"].astype(int).astype(str).apply(lambda x: x.zfill(5))
 
 # Drop NA
 data = data.dropna()
