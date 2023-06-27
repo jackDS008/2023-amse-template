@@ -2,7 +2,7 @@
 
 # Test
 echo "Testing..."
-python project/tests.py
+python tests.py
 
 # All tests passed
 echo "All tests passed"
