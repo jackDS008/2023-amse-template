@@ -9,7 +9,7 @@ def main():
     # Run Pipelines
     command = "python " + os.path.abspath(filePathPipeline_parkverstoesse_bonn)
     os.system(command)
-    command = "python " + os.path.abspath(filePathPipeline_parkverstoesse_bonn)
+    command = "python " + os.path.abspath(filePathPipeline_weather_data)
     os.system(command)
     
     # Test database existence
