@@ -7,9 +7,9 @@ filePathPipeline_weather_data="./data/datapipeline_weather.py"
 
 main() {
     # Run Pipelines
-    command="python $(readlink -f $filePathPipeline_parkverstoesse_bonn)"
+    command="python $(python -c 'import os, sys; print(os.path.realpath(sys.argv[1]))' "$filePathPipeline_parkverstoesse_bonn")"
     eval $command
-    command="python $(readlink -f $filePathPipeline_parkverstoesse_bonn)"
+    command="python $(python -c 'import os, sys; print(os.path.realpath(sys.argv[1]))' "$filePathPipeline_parkverstoesse_bonn")"
     eval $command
 
     # Test database existence
