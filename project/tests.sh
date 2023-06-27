@@ -1,15 +1,20 @@
 #!/bin/bash
 
-filePath_parkverstoesse_bonn="./data/parkverstoesse_bonn.db"
-file_weather_data="./data/weather_data.db"
-filePathPipeline_parkverstoesse_bonn="./data/pipeline_car_park_occupancy.py"
-filePathPipeline_weather_data="./data/datapipeline_weather.py"
+# Get the absolute path of the script's directory
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$script_dir"
+
+# Construct absolute paths of the files
+filePath_parkverstoesse_bonn="$script_dir/data/parkverstoesse_bonn.db"
+file_weather_data="$script_dir/data/weather_data.db"
+filePathPipeline_parkverstoesse_bonn="$script_dir/data/pipeline_car_park_occupancy.py"
+filePathPipeline_weather_data="$script_dir/data/datapipeline_weather.py"
 
 main() {
     # Run Pipelines
-    command="python $(python -c 'import os, sys; print(os.path.realpath(sys.argv[1]))' "$filePathPipeline_parkverstoesse_bonn")"
+    command="python '$(realpath "$filePathPipeline_parkverstoesse_bonn")'"
     eval $command
-    command="python $(python -c 'import os, sys; print(os.path.realpath(sys.argv[1]))' "$filePathPipeline_parkverstoesse_bonn")"
+    command="python '$(realpath "$filePathPipeline_parkverstoesse_bonn")'"
     eval $command
 
     # Test database existence
