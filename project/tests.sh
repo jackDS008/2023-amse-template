@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Test 1: System-level test - Check if output file exists
-if [ -f temperature_vs_parking_violations.png ]; then
+if [ -f ../temperature_vs_parking_violations.png ]; then
     echo "System-level test: Output file exists - PASSED"
 else
     echo "System-level test: Output file does not exist - FAILED"
