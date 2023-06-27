@@ -59,8 +59,8 @@ The data set contains the warnings and fines issued for parking violations in th
 - [X] 4. Data analysis [#4][i4]
 - [x] 5. Data pipeline [#5][i5]
 - [X] 6. Testing [#6][i6]
-- [ ] 7. Continuous integration [#7][i7]
-- [ ] 8. Publish project [#8][i8]
+- [X] 7. Continuous integration [#7][i7]
+- [X] 8. Publish project [#8][i8]
 
 [i1]: https://github.com/jackDS008/2023-amse-template/issues/1
 [i2]: https://github.com/jackDS008/2023-amse-template/issues/2
