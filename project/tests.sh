@@ -7,9 +7,9 @@ filePathPipeline_weather_data="./data/datapipeline_weather.py"
 
 main() {
     # Run Pipelines
-    command="python $(realpath $filePathPipeline_parkverstoesse_bonn)"
+    command="python $(readlink -f $filePathPipeline_parkverstoesse_bonn)"
     eval $command
-    command="python $(realpath $filePathPipeline_parkverstoesse_bonn)"
+    command="python $(readlink -f $filePathPipeline_parkverstoesse_bonn)"
     eval $command
 
     # Test database existence
@@ -35,4 +35,3 @@ main
 # All tests passed
 echo "All tests passed"
 exit 0
-
