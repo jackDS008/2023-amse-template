@@ -1,14 +1,10 @@
-pipeline TemperaturePipeline {
+transform CelsiusToFahrenheit {
+        from temperatureCelsius oftype decimal;
+        to temperatureFahrenheit oftype decimal;
+        temperatureFahrenheit: ((temperatureCelsius * 9/5) + 32);
+    }
 
-    TemperatureExtractor
-        ->ZipInterpreter
-        ->FilePicker
-        ->CSVInterpreter
-        ->ColumnDeleter
-        ->TableInterpreter
-        ->TemperatureTableTransformer
-        ->BatterieTemperatureTableTransformer
-        ->SQLiteLoader;
+pipeline TemperaturePipeline {
 
     block TemperatureExtractor oftype HttpExtractor {
         url: "https://www.mowesta.com/data/measure/mowesta-dataset-20221107.zip";
@@ -47,12 +43,6 @@ pipeline TemperaturePipeline {
         ];
     }
 
-    transform CelsiusToFahrenheit {
-        from temperatureCelsius oftype decimal;
-        to temperatureFahrenheit oftype decimal;
-        temperatureFahrenheit: ((temperatureCelsius * 9/5) + 32);
-    }
-
     block TemperatureTableTransformer oftype TableTransformer {
         inputColumn: 'Temperatur';
         outputColumn: 'Temperatur';
@@ -68,5 +58,15 @@ pipeline TemperaturePipeline {
     block SQLiteLoader oftype SQLiteLoader {
         table: "temperatures";
         file: "./temperatures.sqlite";
-    } 
+    }
+
+    TemperatureExtractor
+        ->ZipInterpreter
+        ->FilePicker
+        ->CSVInterpreter
+        ->ColumnDeleter
+        ->TableInterpreter
+        ->TemperatureTableTransformer
+        ->BatterieTemperatureTableTransformer
+        ->SQLiteLoader;
 }
