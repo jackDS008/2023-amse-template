@@ -10,27 +10,27 @@ pipeline TemperaturePipeline {
         url: "https://www.mowesta.com/data/measure/mowesta-dataset-20221107.zip";
     }
 
-    block ArchiveInterpreter oftype ArchiveInterpreter {
+    block TempArchiveInterpreter oftype ArchiveInterpreter {
         archiveType: "zip";
     }
 
-    block FilePicker oftype FilePicker {
+    block TempFilePicker oftype FilePicker {
         path: "/data.csv";
     }
 
-    block FileInterpreter oftype TextFileInterpreter{
+    block TempFileInterpreter oftype TextFileInterpreter{
         
     }
-    
-    block CSVInterpreter oftype CSVInterpreter {
+
+    block TempCSVInterpreter oftype CSVInterpreter {
         delimiter: ";";
     }
 
-    block ColumnDeleter oftype ColumnDeleter {
+    block TempColumnDeleter oftype ColumnDeleter {
         delete: [column F, column G, column H, column I,  column L, column M, column N, column O];
     }
 
-    block TableInterpreter oftype TableInterpreter {
+    block TempTableInterpreter oftype TableInterpreter {
         header: false;
         columns: [
             "Geraet" oftype integer,
@@ -55,18 +55,19 @@ pipeline TemperaturePipeline {
         use: CelsiusToFahrenheit;
     }
 
-    block SQLiteLoader oftype SQLiteLoader {
+    block TempSQLiteLoader oftype SQLiteLoader {
         table: "temperatures";
         file: "./temperatures.sqlite";
     }
 
     TemperatureExtractor
-        ->ZipInterpreter
-        ->FilePicker
-        ->CSVInterpreter
-        ->ColumnDeleter
-        ->TableInterpreter
+        ->TempArchiveInterpreter
+        ->TempFilePicker
+        ->TempFileInterpreter
+        ->TempCSVInterpreter
+        ->TempColumnDeleter
+        ->TempTableInterpreter
         ->TemperatureTableTransformer
         ->BatterieTemperatureTableTransformer
-        ->SQLiteLoader;
+        ->TempSQLiteLoader;
 }
